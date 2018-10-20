@@ -21,7 +21,8 @@ class School
   end
 
   def sort
-    roster[grade][name].sort
-    roster.sort.to_h
+    roster.each do |grade, names|
+      names.sort
+    end
   end
 end
