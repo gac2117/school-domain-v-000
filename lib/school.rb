@@ -21,6 +21,6 @@ class School
   end
 
   def sort
-    roster.sort.to_hash
+    roster.sort.to_h
   end
 end
