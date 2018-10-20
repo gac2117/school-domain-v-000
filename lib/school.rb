@@ -23,7 +23,7 @@ class School
   def sort
     roster.sort_by {|grade, names| grade}
     roster_sorted = {}
-    roster.each {|i| roster_sorted[i[0]] = i[1]}
+    roster.each {|i| roster_sorted[i[1]] = i[0]}
     roster = roster_sorted
   end
 end
