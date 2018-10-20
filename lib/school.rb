@@ -21,9 +21,6 @@ class School
   end
 
   def sort
-    roster.sort_by {|grade, names| names}
-    roster_sorted = {}
-    roster.each {|i| roster_sorted[i[0]] = i[1]}
-    roster = roster_sorted
+    roster.sort.to_hash
   end
 end
