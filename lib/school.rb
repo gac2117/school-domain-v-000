@@ -21,6 +21,9 @@ class School
   end
 
   def sort
-    roster.sort_by {|grade, student| grade}
+    roster = roster.sort_by {|grade, names| grade}
+    roster_sorted = {}
+    roster.each {|i| roster_sorted[i[0]] = i[1]}
+    roster = roster_sorted
   end
 end
